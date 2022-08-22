@@ -1,5 +1,5 @@
 
-let fileName = 'fk-front' // 打包后的路径
+const  fileName = 'fk-front' // 打包后的路径
 module.exports={
     lintOnSave:false,
     outputDir: fileName,
@@ -23,17 +23,19 @@ module.exports={
             
         }
     },
-    resolve: {
-        //别名
-        alias: {
-          assets: "@/assets",
-          components: "@/components",
-          network: "@network",
-          utils: "@/utils",
-          views: "@/views",
+  
+      
+    },
+    configureWebpack: {
+        resolve: {
+          alias: {
+            assets: "@/assets",
+            components: "@/components",
+            network: "@network",
+            utils: "@/utils",
+            views: "@/views",
+          },
         },
       },
-      
-    }
 
 }
